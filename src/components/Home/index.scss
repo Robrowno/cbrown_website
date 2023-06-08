@@ -1,4 +1,6 @@
 .home-page {
+    display: flex;
+    flex-wrap: wrap;
 
     .text-zone {
         position: absolute;
@@ -15,6 +17,12 @@
         margin: 0;
         font-family: 'Coolvetica';
         font-weight: 400;
+        white-space: nowrap;
+
+        @media only screen and (max-width: 600px) {
+            font-size: 2em; // reduces size for smaller screens
+            white-space: normal; // allows text to break to a new line
+        }
 
         &::before {
             content: '<h1>';
