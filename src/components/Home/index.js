@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import Logo from '../../assets/images/logo-c.png';
+import LogoLetter from '../../assets/images/logo-c.png';
 import { Link } from 'react-router-dom';
+import Logo from '../Logo';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 
@@ -28,7 +29,7 @@ const Home = () => {
                 <br />
                 <span className={`${letterClass}_13`}>I</span>
                 <span className={`${letterClass}_14`}>'m</span>
-                <img src={ Logo } alt="developer" />
+                <img src={ LogoLetter } alt="developer" />
                 <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}
@@ -44,6 +45,7 @@ const Home = () => {
                 <h2>Full Stack Developer // Rally Co-Driver </h2>
                 <Link to='/contact' className='flat-button'>Contact Me</Link>
             </div>
+            <Logo />
         </div>
     );
     }
